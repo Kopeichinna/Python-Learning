@@ -80,3 +80,5 @@ print('_' * 20)
 print(f"| {'female':^7} | {list_of_people.count('female') : ^7} |")
 print(f"| {'male':^7} | {list_of_people.count('male') : ^7} |")
 print('_' * 20)
+
+#adding some changes to my file to play with commits - please ignore!

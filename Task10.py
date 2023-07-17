@@ -19,11 +19,6 @@ l1 = [-1, 1, 2, 0, 3, 12, 4, 5, -1, 6]
 # creating a copy of the list for further modification
 l2 = l1.copy()
 
-# getting rid of zeros to exclude multiplying on it
-for n in l2:
-    if n == 0:
-        l2.remove(n)
-
 # sorting modified list
 list_sorted = sorted(l2)
 
@@ -49,14 +44,9 @@ if multiply_only_positive > multiply_negative_positive:
     final_numbers_pos = tuple(max_positive_list)
     print(f'Max value = "{multiply_only_positive}". '
           f'Nums are: {final_numbers_pos}')
-elif multiply_only_positive < multiply_negative_positive:
+else:
     final_numbers_neg = (max_negative_list[0], max_negative_list[1],
                          max_positive_list[-1])
     print(f'Max value = "{multiply_negative_positive}". '
           f'Nums are: {final_numbers_neg}')
-elif multiply_only_positive == multiply_negative_positive:
-    final_numbers_pos = tuple(max_positive_list)
-    final_numbers_neg = (max_negative_list[0], max_negative_list[1],
-                         max_positive_list[-1])
-    print(f'Max value = "{multiply_only_positive}". '
-          f'Nums are: {final_numbers_pos} or {final_numbers_neg}')
+

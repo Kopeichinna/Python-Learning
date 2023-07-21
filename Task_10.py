@@ -19,9 +19,8 @@ import re
 try:
     with open('input1.txt', 'r') as fh:
         input_data = fh.read()
-
         # getting the list of letters matching the search criteria
-        letters_found = re.findall('[A-Z]{3}([a-z])[A-Z]{3}',
+        letters_found = re.findall('[^A-Z][A-Z]{3}([a-z])[A-Z]{3}[^A-Z]',
                                    string=input_data)
         print(f'"Result: {letters_found}')
 
